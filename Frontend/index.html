@@ -6,325 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Vision Pro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
 </head>
 
 <body>
-    <link rel="script" href="script.js">
-    <nav class="navbar">
-        <div class="wrapper">
-            <div class="logo">
-                <a href="#">
-                    <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"
-                        style="fill: #bbb9b9;">
-                        <path
-                            d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z">
-                        </path>
+    <div class="page1" id="page1">
+        <nav class="navbar1" id="navbar1">
+
+            <ul class="nav-items" id="nav-items">
+                <li class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#b0b0b0"
+                        height="800px" width="800px" version="1.1" id="Capa_1" viewBox="0 0 22.773 22.773"
+                        xml:space="preserve" stroke="#b0b0b0">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z" />
+                                    <path
+                                        d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z" />
+                                </g>
+                            </g>
+                        </g>
+
                     </svg>
-                    <!-- <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg" alt=""> -->
-                </a>
-            </div>
-            <ul class="nav-links">
+                </li>
+                <div class="links">
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">AirPods</a></li>
+                    <li><a href="#">HomePage</a></li>
+                    <li><a href="#">Support</a></li>
+                </div>
                 <li>
-                    <a href="#">
-                        Store
-                    </a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="main">
-                                <P>Graphic design</P>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            Logo Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Card desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Template Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Broshure Desgin
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Web desighn</p>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            HTML Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Wordpreess Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Jhoomla Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Education Website
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Email Services</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Personal Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Marketing
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Mobile Ema il
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="$"><svg fill="#919191" height="200px" width="200px" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 488.4 488.4" xml:space="preserve" stroke="#919191">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg></a>
                 </li>
                 <li>
-                    <a href="#">
-                        Mac
-                    </a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="main">
-                                <P>Graphic design</P>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            Logo Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Card desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Template Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Broshure Desgin
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Web desighn</p>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            HTML Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Wordpreess Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Jhoomla Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Education Website
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Email Services</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Personal Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Marketing
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Mobile Ema il
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        Contact
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                    <div class="mega-box">
-                        <div class="content">
-                            <div class="main">
-                                <P>Graphic design</P>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            Logo Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Card desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Template Desgin
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Broshure Desgin
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Web desighn</p>
-                                <ul class="mega-links">
-                                    <li>
-                                        <a href="#">
-                                            HTML Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Wordpreess Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Jhoomla Website
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Education Website
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="main">
-                                <p>Email Services</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Personal Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Email
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Web Marketing
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Mobile Ema il
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        Entaitainment
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        AirPods
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        HomePage
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Support
-                    </a>
-                </li>
-                <li>
-                    <a role="button" id="globalnav-menubutton-link-search" href=""
-                        data-topnav-flyout-trigger-regular="" data-topnav-flyout-trigger-compact=""
-                        aria-label="Search apple.com" data-analytics-title="open - search field" class=""
-                        style="fill: #bbb9b9;">
-                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="15px" height="44px">
-                            <path
-                                d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z">
-                            </path>
-                        </svg>
-                </li>
-                <li>
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            fill="#000000" width="15px" height="44px" version="1.1" id="Capa_1"
-                            viewBox="0 0 483.1 483.1" xml:space="preserve" style="fill: white;">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" version="1.1" id="Capa_1"
+                            viewBox="0 0 483.1 483.1" xml:space="preserve">
                             <g>
                                 <path
-                                    d="M434.55,418.7l-27.8-313.3c-0.5-6.2-5.7-10.9-12-10.9h-58.6c-0.1-52.1-42.5-94.5-94.6-94.5s-94.5,42.4-94.6,94.5h-58.6   c-6.2,0-11.4,4.7-12,10.9l-27.8,313.3c0,0.4,0,0.7,0,1.1c0,34.9,32.1,63.3,71.5,63.3h243c39.4,0,71.5-28.4,71.5-63.3   C434.55,419.4,434.55,419.1,434.55,418.7z M241.55,24c38.9,0,70.5,31.6,70.6,70.5h-141.2C171.05,55.6,202.65,24,241.55,24z    M363.05,459h-243c-26,0-47.2-17.3-47.5-38.8l26.8-301.7h47.6v42.1c0,6.6,5.4,12,12,12s12-5.4,12-12v-42.1h141.2v42.1   c0,6.6,5.4,12,12,12s12-5.4,12-12v-42.1h47.6l26.8,301.8C410.25,441.7,389.05,459,363.05,459z" />
+                                    d="M434.55,418.7l-27.8-313.3c-0.5-6.2-5.7-10.9-12-10.9h-58.6c-0.1-52.1-42.5-94.5-94.6-94.5s-94.5,42.4-94.6,94.5h-58.6c-6.2,0-11.4,4.7-12,10.9l-27.8,313.3c0,0.4,0,0.7,0,1.1c0,34.9,32.1,63.3,71.5,63.3h243c39.4,0,71.5-28.4,71.5-63.3C434.55,419.4,434.55,419.1,434.55,418.7z M241.55,24c38.9,0,70.5,31.6,70.6,70.5h-141.2C171.05,55.6,202.65,24,241.55,24z M363.05,459h-243c-26,0-47.2-17.3-47.5-38.8l26.8-301.7h47.6v42.1c0,6.6,5.4,12,12,12s12-5.4,12-12v-42.1h141.2v42.1c0,6.6,5.4,12,12,12s12-5.4,12-12v-42.1h47.6l26.8,301.8C410.25,441.7,389.05,459,363.05,459z" />
                             </g>
-                        </svg>
-                    </a>
+                        </svg></a>
+                </li>
+                <li>
+                    <div class="menu-icon">
+                        <div class="menu-icon_line-top"></div>
+                        <div class="menu-icon_line-middle"></div>
+                        <div class="menu-icon_line-bottom"></div>
+                    </div>
                 </li>
             </ul>
+        </nav>
+
+        <nav class="navbar2" id="navbar2" style="background-color: rgb(0, 0,0,0.5)">
+            <ul class="nav-items2">
+                <li class="title_navbar">
+                    <h3>Vision Pro</h3>
+                </li>
+                <li class="guidetour_link">
+                    <a href="#">Guided Tour</a>
+                </li>
+                <li class="techspecs_link">
+                    <a href="#">Tech Specs</a>
+                </li>
+
+                <li>
+                    <button class="demo_button">
+                        Boook a demo
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        Buy
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+
+        <video
+            src="https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/hero/large_2x.mp4"
+            autoplay muted></video>
+
+
+        <div class="page_logo">
+            <img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/hero/apple_vision_pro_logo__ux94yix23r6y_large.png"
+                alt="image is not present">
         </div>
-    </nav>
+        <div>
+            <img src="D:\Sem3Group_Project\Media_Files\Normal_Images\image2.jpg" alt="" class="img_hero">
+        </div>
+    </div>
+    <div class="page2">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+        integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+        integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
 </body>
 
 </html>

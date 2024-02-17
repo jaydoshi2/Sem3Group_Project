@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/gsap@3.9.2/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrolltrigger@1.0.10/dist/ScrollTrigger.min.js"></script>
+  <style>
+    .page1 {
+      position: relative;
+      height: 200vh; /* Adding extra height to the body for scrolling */
+    }
+
+    .page1>video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .page1 .img_hero {
+      height: 100%;
+      width: 70%; /* Adjust the initial width as needed */
+      object-fit: cover;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 0;
+      opacity: 0; /* Initial opacity set to 0 */
+      transition: opacity 0.5s ease; /* Add smooth transition for opacity */
+    }
+  </style>
+</head>
+<body>
+
+<div class="page1">
+  <!-- <video id="page1Video" src="https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/hero/large_2x.mp4" autoplay muted></video> -->
+  <!-- <div class="page_logo">
+    <img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/hero/apple_vision_pro_logo__ux94yix23r6y_large.png" alt="Logo">
+  </div> -->
+  <div>
+    <img src="D:\Sem3Group_Project\Media_Files\Normal_Images\image2.jpg" alt="" class="img_hero">
+</div>
+</div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const video = document.querySelector("#page1Video");
+  const logo = document.querySelector("#page1 .page_logo");
+  const image = document.querySelector("#page1 .img_hero img");
+
+  function playVideo() {
+    video.play();
+
+    gsap.to(logo, {
+      opacity: 0,
+      duration: 0.5,
+    });
+  }
+
+  function showImage() {
+    gsap.to(image, {
+      opacity: 1,
+      duration: 0.5,
+    });
+  }
+
+  function scaleImage() {
+    gsap.to(image, {
+      scale: 0.8, // Adjust the scale value as needed
+    });
+  }
+
+  gsap.to(video, {
+    scrollTrigger: {
+      trigger: "#page1>video",
+      start: "-5% top",
+      end: "bottom 92%",
+      onEnter: playVideo,
+      onComplete: showImage,
+      markers: true,
+    },
+  });
+
+  gsap.to(".img_hero img", {
+    scrollTrigger: {
+      trigger: '.img_hero',
+      start: "top center",
+      end: "bottom center",
+      markers: true,
+    },
+    scale: 0.8,
+    onEnter: scaleImage,
+  });
+
+  video.pause();
+</script>
+
+</body>
+</html>
