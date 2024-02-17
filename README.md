@@ -1,5 +1,5 @@
 # Sem3Group_Project
-# Apple Vision Pro Clone
+<h2>Apple Vision Pro Clone</h2>
 
 ## Aim
 The Apple Vision Pro Clone project is designed with the primary goal of providing a hands-on experience in developing high-tech websites and understanding the underlying technologies. By emulating the design and functionality of Apple's Vision Pro website, this project aims to delve into modern web development practices and enhance proficiency in various technologies.

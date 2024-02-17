@@ -2,128 +2,214 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
 }
 
 body {
     font-family: sans-serif;
 }
 
-nav {
-    position: absolute;
-    width: 70%;
-    top: 6.7%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    background: #000;
+.page1 {
+    position: relative;
+    height: 150vh;
+    width: 100vw;
+    background-color: black;
 }
 
-.wrapper {
+.page2 {
     position: relative;
-    max-width: 1300px;
-    padding: 0px 30px;
-    height: 50px;
-    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.navbar1 {
+    background: transparent;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar2 {
+    height: 7vh;
+    width: 50vw;
+    background-color: black;
+    /* background: transparent; */
+    z-index: 1;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar2 .nav-items2 {
+    color: white;
+    list-style-type: none;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    padding: 0px 0px;
 }
 
-.wrapper .logo {
-    padding: 0px 0px 2.7% 0.1%; 
-    z-index: 2;
+.navbar2 .nav-items2 li a {
     color: #bbb9b9;
-    font-size: 30px;
-    font-weight: bold;
     text-decoration: none;
-}
-
-
-.nav-links {
-    display: flex;
-}
-
-.nav-links li {
-    list-style-type: style;
-}
-
-.nav-links li a {
-    color: #525253;
-    justify-content: space-between;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 12px 20px;
-    /* border-radius: 5px; */
-    transition: all 0.3s ease;
-}
-
-.nav-links li a:hover {
-    /* background: #3664f4; */
-    color:  white ;
-}
-
-
-.mega-box {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    padding: 0 30px;
-    top: 100px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.content {
-    background: transparent;
-    border-radius: 10px;
-    padding: 25px 40px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.main {
-    width: 25%;
-    line-height: 45px;
-}
-
-.main img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
-
-.main p {
-    color: #fff;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.mega-links {
-    border-right:  1px solid #fff;
+.navbar2 .nav-items2 li button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #0071E3;
+    color: white;
+    border: white;
 }
 
-.main .mega-links li {
-    padding: 0 20px;
-}
-
-.main .mega-links li a {
-    padding: 0px;
-    padding: 0 20px;
-    color: #d9d9d9;
-    font-size: 17px;
+.navbar2 .nav-items2 li .demo_button {
+    font-style: normal;
+    text-size-adjust: 100%;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    direction: ltr;
+    list-style: none;
+    box-sizing: content-box;
+    margin: 0;
+    pointer-events: auto;
+    text-decoration: none;
+    opacity: .92;
+    cursor: pointer;
     display: inline-block;
-    width: 80%;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 980px;
+    font-size: 12px;
+    line-height: 1.3333733333;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 3px 10px;
+    margin-top: -1px;
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;
+    border-color: #fff;
+    outline-color: #fff;
 }
 
-.nav-links li:hover .mega-box {
-    transition: all 0.7s;
-    top: 54px;
-    opacity: 1;
-    visibility: visible;
+
+svg {
+    width: 20px;
+    height: 2px;
+    height: auto;
+    fill: #bbb9b9;
 }
 
-svg:hover{
-    fill: #fff;
+.nav-items {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-items li {
+    margin: 0px 15px;
+}
+
+.nav-items li:last-child {
+    margin-right: 0;
+}
+
+.nav-items li a {
+    color: #bbb9b9;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-items li a:hover {
+    color: white;
+}
+
+.nav-items2 li a:hover {
+    color: white;
+}
+
+svg:hover {
+    fill: white;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar2 .nav-items2 li .demo_button:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Video Style */
+.page1>video {
+    height: 65%;
+    width: 85%;
+    object-fit: cover;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* logo style */
+.page1 .page_logo{
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Add this to make the navbar sticky when the user scrolls down */
+#navbar2.sticky {
+    position: fixed;
+    top: 0;
+    /* width: 100%; */
+    /* background-color: #333; Adjust the background color as needed */
+    /* z-index: 1000; */
+  }
+
+.page1 .img_hero{
+    /* display: none; */
+}
+.page1 .img_hero{
+    /* z-index: 0; */
+    height: 100%;
+    width: 85%;
+    object-fit: cover;
+    left: 50%;
+    bottom: 12%;
+    position:absolute;
+    transition: transform 0.3s ease;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+@media screen and (max-width: 800px) {
+    .navbar1 icon {
+        float: right;
+        display: inline;
+    }
+
+    .navbar1.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar1.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .links {
+        display: none;
+    }
 }
