@@ -6,6 +6,7 @@
 
 body {
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .page1 {
@@ -26,14 +27,14 @@ body {
     background: transparent;
     padding: 10px 0;
     text-align: center;
+    z-index: 3;
 }
 
 .navbar2 {
     height: 7vh;
     width: 50vw;
     background-color: black;
-    /* background: transparent; */
-    z-index: 1;
+    z-index: 3;
     
     position: absolute;
     left: 50%;
@@ -150,6 +151,7 @@ svg:hover {
 
 /* Video Style */
 .page1>video {
+    /* opacity: 0;  */
     height: 65%;
     width: 85%;
     object-fit: cover;
@@ -171,25 +173,18 @@ svg:hover {
 #navbar2.sticky {
     position: fixed;
     top: 0;
-    /* width: 100%; */
-    /* background-color: #333; Adjust the background color as needed */
-    /* z-index: 1000; */
   }
 
 .page1 .img_hero{
-    /* display: none; */
-}
-.page1 .img_hero{
-    /* z-index: 0; */
-    height: 100%;
-    width: 85%;
+    /* opacity: 0; */
+    height: 150vh;
+    width: 85vw;
     object-fit: cover;
-    left: 50%;
+    left: 7.5%;
     bottom: 12%;
     position:absolute;
     transition: transform 0.3s ease;
-    transform: translateX(-50%);
-    z-index: 0;
+    /* z-index: -1; */
 }
 @media screen and (max-width: 800px) {
     .navbar1 icon {

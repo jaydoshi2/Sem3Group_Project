@@ -62,7 +62,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Select the video element
 const video = document.querySelector("#page1 video");
 const logo = document.querySelector("#page1 .page_logo");
-const image = document.querySelector("#page1 .img_hero img");
+const image = document.querySelector("#page1 .img_hero");
 // Function to play the video
 function playVideo() {
   video.play();
@@ -72,62 +72,56 @@ function playVideo() {
     opacity: 0,
     duration: 0.5, // Adjust the duration as needed
   });
+  
 }
 
 // Function to stop the video
+gsap.registerPlugin(ScrollTrigger);
 
-
-gsap.to(video, {
+const tl = gsap.timeline({
+  ease: "none",
+});
+tl.set(image,{autoAlpha: 0})
+// var tl4 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: image,
+//     start: "center center",
+//     end: "150% center",
+//     pin: true,
+//     scrub: true,
+//     // markers:true,
+//   },
+// });
+tl.to(video, {
   scrollTrigger: {
-    trigger: "#page1>video", // Adjust the trigger element if needed
-    start: "-5% top",  // Adjust the start point as needed
-    end: "bottom 92%", // Adjust the end point as needed
-    onEnter: playVideo, // Callback to play the video
-    markers: true, // Set to true to display markers (for debugging purposes)
+    trigger: video,
+    start: "-7% top",
+    end: "bottom 100%", 
+    onEnter: playVideo,
+    onLeave: () => {
+      console.log('yes')
+      // tl.to(video,{autoAlpha:0})
+      tl.to("#page1 .img_hero", { autoAlpha: 1})
+    },
+    markers: false,
   },
 });
 
+tl.fromTo(
+  image,
+  { autoAlpha: 1, scale: 1 },
+  { autoAlpha: 1, scale: 0.8,}
+);
 
-// Ensure the video is paused initially
-video.pause();
+// Scroll-triggered animation for the image
+ScrollTrigger.create({
+  trigger: image,
+  start: "82% 100%",
+  // end: "bottom 85%",
+  markers: true,
+  pin:true,
+  animation: tl,
+  scrub: true,
+  pinSpacing: false,
+});
 
-
-// gsap.to(image,
-//   { scale: 0.6 },
-//   {
-//     scale: 1,
-//     ease: "none",
-//     force3D: true,
-//     scrollTrigger: {
-//       pin:'.img_hero', 
-//       trigger: '.img_hero',
-//       start: "top center",
-//       end: "bottom center",
-//       // onEnter:
-//       scrub: 0.5,
-//       markers: true,
-//     },
-//     scale: 0.8,          
-//   });
-
-
-
-   
-        gsap.to(
-            image,
-            { scale: 0.6 },
-            {
-                scale: 1,
-                ease: "none",
-                force3D: true,
-                scrollTrigger: {
-                    pin: ".img_hero",
-                    trigger: ".img_hero",
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: 0.5,
-                    markers: true,
-                    scale: 0.5,
-                },
-            }
-        );
