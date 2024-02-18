@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/gsap@3.9.2/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/scrolltrigger@1.0.10/dist/ScrollTrigger.min.js"></script>
-  <style>
-    .page1 {
-      position: relative;
-      height: 200vh; /* Adding extra height to the body for scrolling */
-    }
-
-    .page1>video {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%);
-      z-index: 0;
-    }
-
-    .page1 .img_hero {
-      height: 100%;
-      width: 70%; /* Adjust the initial width as needed */
-      object-fit: cover;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%);
-      z-index: 0;
-      opacity: 0; /* Initial opacity set to 0 */
-      transition: opacity 0.5s ease; /* Add smooth transition for opacity */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <title>Video and Image Example</title>
 </head>
+
 <body>
+  <section id="image">
+    <img src="https://p645224.mittwaldserver.info/wp-content/uploads/2023/09/leistungen-planung-waermebild.jpg">
+  </section>
+  <div class="spacer"></div>
+  <section id="text" class="text">
+    <div>
+      <h1>This is text</h1>
+    </div>
+  </section>
+  <div class="spacer">
+    <h2>anything else</h2>
+    <span>Example By: Steven Stavrakis</span>
+  </div>
 
-<div class="page1">
-  <!-- <video id="page1Video" src="https://www.apple.com/105/media/us/apple-vision-pro/2024/6e1432b2-fe09-4113-a1af-f20987bcfeee/anim/hero/large_2x.mp4" autoplay muted></video> -->
-  <!-- <div class="page_logo">
-    <img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/hero/apple_vision_pro_logo__ux94yix23r6y_large.png" alt="Logo">
-  </div> -->
-  <div>
-    <img src="D:\Sem3Group_Project\Media_Files\Normal_Images\image2.jpg" alt="" class="img_hero">
-</div>
-</div>
 
-<script>
-  gsap.registerPlugin(ScrollTrigger);
 
-  const video = document.querySelector("#page1Video");
-  const logo = document.querySelector("#page1 .page_logo");
-  const image = document.querySelector("#page1 .img_hero img");
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+    integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+    integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  function playVideo() {
-    video.play();
 
-    gsap.to(logo, {
-      opacity: 0,
-      duration: 0.5,
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      ease: "none"
     });
-  }
 
-  function showImage() {
-    gsap.to(image, {
-      opacity: 1,
-      duration: 0.5,
+    tl.from("#image img", {
+      scale: 1,
+      duration: 1,
+    })
+
+    tl.to("#image img", {
+      scale: 0.6, // End with 60% of the original size
+      duration: 1,
     });
-  }
-
-  function scaleImage() {
-    gsap.to(image, {
-      scale: 0.8, // Adjust the scale value as needed
-    });
-  }
-
-  gsap.to(video, {
-    scrollTrigger: {
-      trigger: "#page1>video",
-      start: "-5% top",
-      end: "bottom 92%",
-      onEnter: playVideo,
-      onComplete: showImage,
+    ScrollTrigger.create({
+      trigger: "#image",
+      start: "top top",
+      end: "+=200%",
+      pin: true,
       markers: true,
-    },
-  });
-
-  gsap.to(".img_hero img", {
-    scrollTrigger: {
-      trigger: '.img_hero',
-      start: "top center",
-      end: "bottom center",
-      markers: true,
-    },
-    scale: 0.8,
-    onEnter: scaleImage,
-  });
-
-  video.pause();
-</script>
-
+      animation: tl,
+      scrub: 0.78,
+      pinSpacing: false
+    })
+  </script>
 </body>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  #image {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  } 
+
+  img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .text {
+    z-index: 2;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
+  #text div {
+    background: white;
+  }
+
+  h1 {
+    padding: 30px;
+  }
+
+  .spacer {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    position: relative;
+  }
+
+  span {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+
 </html>
