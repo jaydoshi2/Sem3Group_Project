@@ -56,72 +56,76 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 
-// 
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Select the video element
 const video = document.querySelector("#page1 video");
 const logo = document.querySelector("#page1 .page_logo");
 const image = document.querySelector("#page1 .img_hero");
-// Function to play the video
+counter = 0;
 function playVideo() {
-  video.play();
 
-  // Add animation to fade out the logo
+  counter += 1
+
+  if (counter == 1) {
+    video.play();
+  }
+  console.log(counter)
   gsap.to(logo, {
     opacity: 0,
     duration: 0.5, // Adjust the duration as needed
   });
-  
+
 }
 
 // Function to stop the video
 gsap.registerPlugin(ScrollTrigger);
-
 const tl = gsap.timeline({
   ease: "none",
 });
-tl.set(image,{autoAlpha: 0})
-// var tl4 = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: image,
-//     start: "center center",
-//     end: "150% center",
-//     pin: true,
-//     scrub: true,
-//     // markers:true,
-//   },
-// });
+tl.set(image, { autoAlpha: 0 });
+
 tl.to(video, {
   scrollTrigger: {
     trigger: video,
     start: "-7% top",
-    end: "bottom 100%", 
+    end: "bottom 60%",
     onEnter: playVideo,
-    onLeave: () => {
-      console.log('yes')
-      // tl.to(video,{autoAlpha:0})
-      tl.to("#page1 .img_hero", { autoAlpha: 1})
-    },
-    markers: false,
+    markers: true
   },
 });
 
 tl.fromTo(
   image,
   { autoAlpha: 1, scale: 1 },
-  { autoAlpha: 1, scale: 0.8,}
+  { autoAlpha: 1, scale: 0.69 }
 );
 
-// Scroll-triggered animation for the image
 ScrollTrigger.create({
   trigger: image,
   start: "82% 100%",
-  // end: "bottom 85%",
-  markers: true,
-  pin:true,
+  end: "bottom -100%",
+  // markers: true,
+  pin: true,
   animation: tl,
   scrub: true,
   pinSpacing: false,
 });
 
+// Additional animation for gradually decreasing opacity
+
+tl.fromTo(
+  image, {
+
+  onEnter: () => {
+
+  },
+  onLeave: () => {
+
+    // tl.from(video,{autoAlpha:1})
+
+  },
+}
+
+)
