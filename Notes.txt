@@ -1,0 +1,156 @@
+THESE ARE IMP CONCEPTS OF GSAP TO KNOW
+
+1) CONTROL AND CALLBACKS
+link: https://gsap.com/resources/getting-started/control/
+2) GSAP TIMELINE
+link: https://gsap.com/docs/v3/GSAP/gsap.timeline()/
+3) SCROLLERS AND CALLERS
+    a)onStart b)onEnter c) onLeave d)onEnd f)onReverse d)onLeaveBack and many others
+        (cannot find link of this topic so whole chatgpt output is here)
+        (also Do chatgpt for each one to understand properly or google it)
+
+    onStart:
+
+    Description: Invoked when the animation begins.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      onStart: function() {
+        console.log("Animation started!");
+      },
+    });
+
+    onUpdate:
+
+    Description: Called on every frame during the animation, allowing you to perform actions as the animation progresses.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      onUpdate: function() {
+        console.log("Animation is updating!");
+      },
+    });
+
+    onComplete:
+
+    Description: Invoked when the animation completes.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      onComplete: function() {
+        console.log("Animation completed!");
+      },
+    });
+    onReverseComplete:
+
+    Description: Called when the animation completes in reverse (when reversing).
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      onReverseComplete: function() {
+        console.log("Reverse animation completed!");
+      },
+    });
+    onRepeat:
+
+    Description: Called on each repeat iteration.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      repeat: 2,
+      onRepeat: function() {
+        console.log("Repeat iteration!");
+      },
+    });
+    onReverse:
+
+    Description: Called when the animation is reversed.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      onReverse: function() {
+        console.log("Animation is in reverse!");
+      },
+    });
+    onInterrupt:
+
+    Description: Invoked if the animation is interrupted (e.g., by killing it).
+    Example:
+    javascript
+    Copy code
+    const animation = gsap.to(element, {
+      x: 100,
+      onInterrupt: function() {
+        console.log("Animation was interrupted!");
+      },
+    });
+    // To interrupt the animation
+    animation.kill();
+    onLeave:
+
+    Description: Used in conjunction with ScrollTrigger. Invoked when the trigger element leaves the viewport during a scroll animation.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onLeave: function() {
+          console.log("Element left the viewport!");
+        },
+      },
+    });
+    onLeaveBack:
+
+    Description: Used in conjunction with ScrollTrigger. Invoked when the trigger element leaves the viewport while scrolling back up.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onLeaveBack: function() {
+          console.log("Element left the viewport scrolling back!");
+        },
+      },
+    });
+    onEnter:
+
+    Description: Used in conjunction with ScrollTrigger. Invoked when the trigger element enters the viewport during a scroll animation.
+    Example:
+    javascript
+    Copy code
+    gsap.to(element, {
+      x: 100,
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onEnter: function() {
+          console.log("Element entered the viewport!");
+        },
+      },
+    });
+    These callbacks allow you to customize your animations by executing specific functions at different points in the animation timeline or during scroll-triggered animations.
+
+
+
+4) 
