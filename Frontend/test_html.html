@@ -1,121 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+<HTML>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+      <link rel="stylesheet" href="temp.css">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Video and Image Example</title>
-</head>
+  </head>
+  <BODY>
 
-<body>
-  <section id="image">
-    <img src="https://p645224.mittwaldserver.info/wp-content/uploads/2023/09/leistungen-planung-waermebild.jpg">
-  </section>
-  <div class="spacer"></div>
-  <section id="text" class="text">
-    <div>
-      <h1>This is text</h1>
-    </div>
-  </section>
-  <div class="spacer">
-    <h2>anything else</h2>
-    <span>Example By: Steven Stavrakis</span>
-  </div>
+      <div class="slider-part">
+          <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-1"><img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_mt_hood__bowcnbltk57m_large.jpg" alt=""></div>
+                <div class="swiper-slide swiper-2"><img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_mt_hood__bowcnbltk57m_small.jpg" alt=""></div>
+                <div class="swiper-slide swiper-3"><img src="https://www.apple.com/v/apple-vision-pro/c/images/overview/visionos/environment_moon__cddspuen58eq_small.jpg" alt=""></div>
+              </div>
+              <div class="swiper-button-next" style="padding-right: 80px; color: #fff;"></div>
+              <div class="swiper-button-prev" style="padding-left: 80px; color: #fff;"></div>
+              <div class="swiper-pagination " style="color:#fff; margin-left:50%; border-radius: 20px; background-color: black; width:70px; height: 20px; padding-top: 10px; "></div>
+          </div>
+      </div>
+
+      <div id="page-5">
+          <div id="left-5">
+            <h1>
+              Your apps live in <br />
+              your space.
+            </h1>
+          </div>
+          <div id="right-5">
+            <h3>
+              With Vision Pro, you have an infinite canvas that transforms how you
+              use the apps you love. Arrange apps anywhere and scale them to the
+              perfect size, making the workspace of your dreams a reality — all
+              while staying present in the world around you. Browse the web in
+              Safari, create a to-do list in Notes, chat in Messages, and
+              seamlessly move between them with a glance.
+            </h3>
+            <button>+ Learn more about apps</button>
+            
+            <script src="temp.js"></script>
+          </div>
+        </div>
 
 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+              var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1.1,
+              centeredSlides: true,
+              spaceBetween: 20,
+              pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+              
+              },
+              navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
 
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
-    integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
-    integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    const tl = gsap.timeline({
-      ease: "none"
-    });
-
-    tl.from("#image img", {
-      scale: 1,
-      duration: 1,
-    })
-
-    tl.to("#image img", {
-      scale: 0.6, // End with 60% of the original size
-      duration: 1,
-    });
-    ScrollTrigger.create({
-      trigger: "#image",
-      start: "top top",
-      end: "+=200%",
-      pin: true,
-      markers: true,
-      animation: tl,
-      scrub: 0.78,
-      pinSpacing: false
-    })
-  </script>
-</body>
-
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  #image {
-    height: 100vh;
-    width: 100vw;
-    z-index: 1;
-  } 
-
-  img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
-
-  .text {
-    z-index: 2;
-    display: grid;
-    place-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-  }
-
-  #text div {
-    background: white;
-  }
-
-  h1 {
-    padding: 30px;
-  }
-
-  .spacer {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    place-content: center;
-    position: relative;
-  }
-
-  span {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-</style>
-
-</html>
+              },
+              loop: true,
+              });
+        </script>
+  </BODY>
+</HTML>

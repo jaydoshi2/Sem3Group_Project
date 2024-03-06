@@ -1,0 +1,146 @@
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.slider-part{
+        padding: 2vh 0vw;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover ; 
+        transform: scaleX(50%,50%);
+    }
+    .swiper-pagination-bullet-active {
+        background-color: white;
+    }
+    
+    .swiper-slide {
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .swiper-slide img {
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    
+    @media (max-width:500px) {
+        
+        .slider-part{
+            height: 50vh;
+        }
+           
+    }
+
+    #page-5{
+        position: relative;
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+    }
+
+
+    #left-5{
+        position: relative;
+        height: 100%;
+        width: 50%;
+
+    }
+
+    #left-5>h1{
+        font-size: 2.3vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+    }
+
+    #right-5{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        padding-left: 5vw;
+    }
+
+    #right-5>h3{
+        font-size: 2vw;
+        width: 90%;
+        color: grey;
+    }
+
+    #right-5>button{
+        padding: 10px 20px;
+        border: none;
+        background-color: orange;
+        color: white;
+        font-weight: 400;
+        border-radius: 50px;
+        font-size: 1.3vw;
+        margin-top: 1.5vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        #page-5{
+            height: 50vh;
+            margin-top: 25%;
+        }
+
+        #left-5{
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-top: 15px;
+            height: 60%;
+        }
+
+        #left-5>h1{
+            font-size: 3vw;
+        }
+
+        #right-5{
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            margin-top: 15px;
+            height: 60%;
+        }
+
+        #right-5>h3{
+            font-weight: 300;
+            font-size: 3vw;
+        }
+
+        #right-5>button{
+            margin-top: 15%;
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+
