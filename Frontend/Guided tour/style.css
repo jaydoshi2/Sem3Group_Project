@@ -1,0 +1,74 @@
+.overlayText {
+    position: absolute;
+    top: 50%;
+    
+    left: 40.5%;
+    z-index: 1;
+  }
+.videoadjust{
+    width:100%;
+    height: 100vh;
+}  
+  #topText {
+    color: white;
+    font-size: 30px;
+    
+    margin-left: 60px; 
+    
+  }
+  .svgcenter{
+    position: absolute;
+    justify-content: center;
+
+  }
+  #topText-1 {
+    color: white;
+    font-size: 60px;
+    height: 60px;
+   width:400px;
+   top: 2;
+  }
+ 
+  .center {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 50%;
+  }
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px; /* Left margin */
+    margin-right: 20px; /* Right margin */
+    flex-direction: row; /* Set the direction to row */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+  .image-container > div {
+    width: 47%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add space between images */
+  }
+  .image-container img {
+    width: 100%; /* Ensure image takes full width of its container */
+  }
+  .image-container .image-text {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px; /* Adjust the margin as needed */
+    color: black;
+  }
+  
+
+ .container {
+    position: relative;
+    display: inline-block;
+  }
+  .overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+ /* extra */
+
