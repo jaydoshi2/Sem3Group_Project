@@ -219,9 +219,9 @@ svg:hover {
 .headline1 {
 
     /* text-align: center;  a new change */
-    font-size: 4vw;
+    font-size: 2.5vw;
     color: #fff;
-    font-weight: 450;
+    font-weight: 550;
     position: absolute;
     bottom: 40%;
     left: 50%;
@@ -229,7 +229,7 @@ svg:hover {
     transform: translateX(-50%);
     white-space: nowrap;
     background: transparent;
-    z-index: 3;
+    z-index: 4;
 
 }
 
@@ -252,9 +252,9 @@ svg:hover {
 }
 
 .headline2 {
-    font-size: 4vw;
+    font-size: 2.5vw;
     color: #fff;
-    font-weight: 450;
+    font-weight: 550;
     position: absolute;
     bottom: 40%;
     left: 50%;
@@ -262,7 +262,7 @@ svg:hover {
     transform: translateX(-50%);
     white-space: nowrap;
     background: transparent;
-    z-index: 3;
+    z-index: 4;
 
 }
 
@@ -284,9 +284,9 @@ svg:hover {
 }
 
 .headline3 {
-    font-size: 4vw;
+    font-size: 2.5vw;
     color: #fff;
-    font-weight: 450;
+    font-weight: 550;
     position: absolute;
     bottom: 40%;
     left: 50%;
@@ -294,7 +294,7 @@ svg:hover {
     transform: translateX(-50%);
     white-space: nowrap;
     background: transparent;
-    z-index: 3;
+    z-index: 4;
 
 }
 
@@ -320,9 +320,9 @@ svg:hover {
 
 .headline4 {
 
-    font-size: 4vw;
+    font-size: 2.5vw;
     color: #fff;
-    font-weight: 450;
+    font-weight: 550;
     position: absolute;
     bottom: 40%;
     left: 50%;
@@ -330,7 +330,7 @@ svg:hover {
     transform: translateX(-50%);
     white-space: nowrap;
     background: transparent;
-    z-index: 3;
+    z-index: 4;
 
 }
 

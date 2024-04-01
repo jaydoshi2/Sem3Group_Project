@@ -255,7 +255,7 @@ tl.set(image, { autoAlpha: 0 });
 tl.to(video, {
   scrollTrigger: {
     trigger: video,
-    start: "-5% top",
+    start: "-3% top",
     end: "100% bottom",
     onEnter: playVideo,
     onLeave: stopvid,
@@ -266,7 +266,7 @@ tl.to(video, {
     onEnterBack: () => {
       gsap.set(image, { autoAlpha: 1 })
     },
-    // markers: true,
+    markers: true,
   },
 });
 
@@ -291,7 +291,7 @@ tl.fromTo(image,{
     start: "660px 45%",  // Adjust the start value based on the end of the previous timeline
     end: "660px 15%",
     scrub: true,
-    markers: true,
+    // markers: true,
   }  // Gradually decrease opacity to 
 });
 
@@ -344,37 +344,42 @@ const tl5 = gsap.timeline({
 });
 
 
-tl2.set(".headline1", { autoAlpha: 0 })
+tl2.set(".headline1", { autoAlpha: 0,y: "100%" })
 tl2.set(video1, { autoAlpha: 0 })
 
-tl2.to([".headline1", video1], { autoAlpha: 1 })
+tl2.to([video1], { autoAlpha: 1 })
+tl2.to(".headline1",{autoAlpha: 1,y:"-45%"})
 tl2.set([".headline1", video1], { autoAlpha: 1 })
 tl2.to([".headline1", video1], { autoAlpha: 0 })
 tl2.set([".headline1", video1], { autoAlpha: 0 })
 
 
-tl3.set(".headline2", { autoAlpha: 0 })
+tl3.set(".headline2", { autoAlpha: 0,y: "110%" })
 tl3.set(video2, { autoAlpha: 0 })
 
-tl3.to([".headline2", video2], { autoAlpha: 1, })
+
+tl3.to([video2], { autoAlpha: 1 })
+tl3.to(".headline2",{autoAlpha: 1,y:"-40"})
 tl3.set([".headline2", video2], { autoAlpha: 1 })
 tl3.to([".headline2", video2], { autoAlpha: 0 })
 tl3.set([".headline2", video2], { autoAlpha: 0 })
 
 
-tl4.set(".headline3", { autoAlpha: 0 })
+tl4.set(".headline3", { autoAlpha: 0,y: "120%" })
 tl4.set(video3, { autoAlpha: 0 })
 
-tl4.to([".headline3", video3], { autoAlpha: 1, })
+tl4.to([video3], { autoAlpha: 1 })
+tl4.to(".headline3",{autoAlpha: 1,y:"-35"})
 tl4.set([".headline3", video3], { autoAlpha: 1 })
 tl4.to([".headline3", video3], { autoAlpha: 0 })
 tl4.set([".headline3", video3], { autoAlpha: 0 })
 
 
-tl5.set(".headline4", { autoAlpha: 0 })
+tl5.set(".headline4", { autoAlpha: 0,y: "150%" })
 tl5.set(video4, { autoAlpha: 0 })
 
-tl5.to([".headline4", video4], { autoAlpha: 1, })
+tl5.to([video4], { autoAlpha: 1 })
+tl5.to(".headline4",{autoAlpha: 1,y:"-20"})
 tl5.set([".headline4", video4], { autoAlpha: 1 })
 tl5.to([".headline4", video4], { autoAlpha: 0 })
 tl5.set([".headline4", video4], { autoAlpha: 0 })
@@ -442,7 +447,7 @@ tl6.to(".page3 video", {
 })
 tl6.to(".page3 .center-page3", {
 
-  y: "-70%",
+  y: "-100%",
 })
 
 
@@ -464,7 +469,7 @@ tl7.to(".page5 video", {
 })
 tl7.to(".page5 .center-page5", {
 
-  y: "-70%",
+  y: "-100%",
 })
 
 
@@ -486,7 +491,7 @@ tl8.to(".page7 video", {
 })
 tl8.to(".page7 .center-page7", {
 
-  y: "-70%",
+  y: "-100%",
 })
 
 const tl9 = gsap.timeline({
@@ -507,7 +512,7 @@ tl9.to(".page9 video", {
 })
 tl9.to(".page9 .center-page9", {
 
-  y: "-70%",
+  y: "-100%",
 })
 
 
