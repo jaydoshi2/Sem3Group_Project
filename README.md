@@ -38,8 +38,8 @@ Alternatively, you can download the ZIP file of the project from the repository 
 Open the project in Visual Studio Code to explore the code, make modifications, and run the project locally.
 
 ## Contributed By
-- Contributor 1
-- Contributor 2
-- Contributor 3
+- Dhruv Mehta
+- Meet shah
+- Kirtan patel
 
 Feel free to explore, contribute, and learn from the Apple Vision Pro Clone project!
