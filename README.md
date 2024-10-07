@@ -43,3 +43,5 @@ Open the project in Visual Studio Code to explore the code, make modifications, 
 - Kirtan patel
 
 Feel free to explore, contribute, and learn from the Apple Vision Pro Clone project!
+
+false changes 
