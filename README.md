@@ -1,5 +1,5 @@
 
-# APPLE VISION PRO WEBSITE
+# APPLE VISION PRO WEBSITE (not responsive)
 
 THIS IS THE DEPLOYED WEBSITE ON NETLIFY (https://endearing-medovik-f7930d.netlify.app/)
 
