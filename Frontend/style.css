@@ -674,6 +674,7 @@ svg:hover {
     position: absolute;
     bottom: 55%;
     left: 50%;
+    top: 15em;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -1451,7 +1452,7 @@ svg:hover {
     height: 90%;
     width: 45%;
     position: relative;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_top__k3b8lzqd1l2m_large.jpg);
+    /* background-image: url(,.); */
     background-size: cover;
 }
 
@@ -1459,7 +1460,7 @@ svg:hover {
     height: 90%;
     width: 45%;
     position: relative;
-    background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_side__gm4agomrwl2e_large.jpg);
+    /* background-image: url(https://www.apple.com/v/apple-vision-pro/a/images/overview/design/glass_side__gm4agomrwl2e_large.jpg); */
     background-size: cover;
 }
 
