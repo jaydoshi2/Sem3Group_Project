@@ -1,8 +1,10 @@
-# Sem3Group_Project
-<h2>Apple Vision Pro Clone</h2>
+
+# APPLE VISION PRO WEBSITE
+
+THIS IS THE DEPLOYED WEBSITE ON NETLIFY (https://endearing-medovik-f7930d.netlify.app/)
 
 ## Aim
-The Apple Vision Pro Clone project is designed with the primary goal of providing a hands-on experience in developing high-tech websites and understanding the underlying technologies. By emulating the design and functionality of Apple's Vision Pro website, this project aims to delve into modern web development practices and enhance proficiency in various technologies.
+The Apple Vision Pro website project is designed with the primary goal of providing a hands-on experience in developing high-tech websites and understanding the underlying technologies. By emulating the design and functionality of Apple's Vision Pro website, this project aims to delve into modern web development practices and enhance proficiency in various technologies.
 
 ## Tools Used
 - **Vscode:**
@@ -14,6 +16,7 @@ The Apple Vision Pro Clone project is designed with the primary goal of providin
 
 - **CSS:**
   Cascading Style Sheets (CSS) is employed for styling and layout, providing a visually appealing and responsive design that closely mirrors Apple's Vision Pro website.
+  
 
 - **JavaScript:**
   JavaScript is utilized to enhance the project's interactivity, making it dynamic and engaging for users.
@@ -25,9 +28,9 @@ The Apple Vision Pro Clone project is designed with the primary goal of providin
   Locomotive Scroll is used for a smooth scrolling experience, enhancing user navigation and providing a seamless feel to the website.
 
 ## Setup Steps
-To access and explore the Apple Vision Pro Clone project, follow these steps:
+To access and explore the Apple Vision Pro project, follow these steps:
 
-1. **Clone the Repository:**
+1. * the Repository:**
    ```bash
    git clone https://github.com/your-username/apple-vision-pro-clone.git
 
@@ -42,6 +45,6 @@ Open the project in Visual Studio Code to explore the code, make modifications, 
 - Meet shah
 - Kirtan patel
 
-Feel free to explore, contribute, and learn from the Apple Vision Pro Clone project!
+Feel free to explore, contribute, and learn from the Apple Vision Pro project!
 
 false changes 
