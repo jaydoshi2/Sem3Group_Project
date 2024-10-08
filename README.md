@@ -7,7 +7,7 @@
 
 ## 🎯 Aim
 
-The **Apple Vision Pro** website project is designed with the primary goal of providing a hands-on experience in developing high-tech websites and understanding the underlying technologies. By emulating the design and functionality of Apple's Vision Pro website, this project aims to delve into modern web development practices and enhance proficiency in various technologies.
+The **Apple Vision Pro** website project is designed with the primary goal of providing a hands-on experience in developing high-tech websites and understanding the underlying technologies. By emulating the design and functionality of Apple's Vision Pro website, this project aims to delve into modern web development practices and enhance proficiency in various frontend technologies.
 
 ---
 
