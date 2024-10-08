@@ -51,6 +51,7 @@ Alternatively, you can download the ZIP file of the project from the repository 
 ## Open in Vscode
 Open the project in Visual Studio Code to explore the code, make modifications, and run the project locally.
 
+---
 ##🤝🏻Contributed By
 - Dhruv Mehta
 - Meet shah
